@@ -9,10 +9,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.0
   http: ^0.11.3
-  redux: ^2.1.1
-  flutter_redux: ^0.3.5
-  redux_epics: "^0.7.0"
-  redux_logging: "^0.1.4"
   built_collection: "^3.0.5"
 
 dev_dependencies:
