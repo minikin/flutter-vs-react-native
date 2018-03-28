@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class Photo {
-  final String id;
+  final int id;
   final String imagePath;
 
   Photo.fromJson(Map jsonMap) :
     id = jsonMap['id'],
-    imagePath = jsonMap['path'];
+    imagePath = jsonMap['url'];
 }
 
 Future<Stream<Photo>>getPhotos() async {
