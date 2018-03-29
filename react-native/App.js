@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import PhotosList from './src/PhotosList';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Test</Text>
+      <PhotosList />
     </View>
   );
 }
