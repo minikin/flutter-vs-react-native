@@ -8,37 +8,46 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+
+	// MARK: - Injections
+
+	private var photoDataSourse = ItemsDataSource(items: [Photo](),
+																								cellDescriptor: { $0.cellDescriptor })
 
 	// MARK: - IBOutlets
-	@IBOutlet weak var photosCollectionView: UICollectionView!
+
+	@IBOutlet private weak var photosCollectionView: UICollectionView! {
+		didSet {
+			let layout = CommonFlowLayout(columns: 1,
+																		itemHeight: 80,
+																		inset: 5,
+																		spacing: 5,
+																		lineSpacing: 5)
+			photosCollectionView.collectionViewLayout = layout
+			photosCollectionView.dataSource = photoDataSourse
+			photosCollectionView.delegate = self
+			photosCollectionView.reloadData()
+		}
+	}
+	
+	// MARK: - Instance properties
+
+	private var photos = [Photo]()
 
 	// MARK: - ViewController LifeCycle
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-
 	}
 
+	// MARK: - Helpers
 
+	
 
 }
 
-	// MARK: - UICollectionViewDataSource
-
-extension ViewController: UICollectionViewDataSource {
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 10
-	}
-
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
-	}
-
-}
 	// MARK: - UICollectionViewDelegate
 
-extension ViewController: UICollectionViewDelegate {
-
-}
+extension ViewController: UICollectionViewDelegate {}
