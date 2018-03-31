@@ -21,7 +21,11 @@ struct Photo: Codable {
 
 extension Photo {
 	func configureCell(_ cell: PhotoCell) {
-		cell.photoView.image = UIImage()
+		guard let url = URL(string: photoUrlPath) else {
+			return
+		}
+		print(url)
+		cell.photoView.download(from: url)
 	}
 }
 

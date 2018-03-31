@@ -17,6 +17,7 @@
 		FCF49549206FAA740017ED0F /* CellDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF49548206FAA740017ED0F /* CellDescriptor.swift */; };
 		FCF4954B206FAAA20017ED0F /* ItemsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4954A206FAAA20017ED0F /* ItemsDataSource.swift */; };
 		FCF4954E206FB35A0017ED0F /* CommonFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4954D206FB35A0017ED0F /* CommonFlowLayout.swift */; };
+		FCF49550206FB85C0017ED0F /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4954F206FB85C0017ED0F /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FCF49548206FAA740017ED0F /* CellDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDescriptor.swift; sourceTree = "<group>"; };
 		FCF4954A206FAAA20017ED0F /* ItemsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDataSource.swift; sourceTree = "<group>"; };
 		FCF4954D206FB35A0017ED0F /* CommonFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFlowLayout.swift; sourceTree = "<group>"; };
+		FCF4954F206FB85C0017ED0F /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		FC16C2922065643000613C92 /* native-ios */ = {
 			isa = PBXGroup;
 			children = (
+				FCF49551206FBC320017ED0F /* Utilities */,
 				FCF49545206F984E0017ED0F /* Views */,
 				FCF49541206F945F0017ED0F /* Models */,
 				FCF49543206F94790017ED0F /* Supporting Files */,
@@ -96,7 +99,6 @@
 				FC16C2932065643000613C92 /* AppDelegate.swift */,
 				FC16C29A2065643000613C92 /* Assets.xcassets */,
 				FC16C29F2065643000613C92 /* Info.plist */,
-				FCF4954A206FAAA20017ED0F /* ItemsDataSource.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +119,15 @@
 				FCF4954D206FB35A0017ED0F /* CommonFlowLayout.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FCF49551206FBC320017ED0F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FCF4954A206FAAA20017ED0F /* ItemsDataSource.swift */,
+				FCF4954F206FB85C0017ED0F /* UIImageView+Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 				FC16C2962065643000613C92 /* ViewController.swift in Sources */,
 				FCF4954E206FB35A0017ED0F /* CommonFlowLayout.swift in Sources */,
 				FC16C2942065643000613C92 /* AppDelegate.swift in Sources */,
+				FCF49550206FB85C0017ED0F /* UIImageView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

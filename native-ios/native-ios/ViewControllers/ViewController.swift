@@ -20,31 +20,50 @@ final class ViewController: UIViewController {
 	@IBOutlet private weak var photosCollectionView: UICollectionView! {
 		didSet {
 			let layout = CommonFlowLayout(columns: 1,
-																		itemHeight: 80,
+																		itemHeight: 120,
 																		inset: 5,
 																		spacing: 5,
 																		lineSpacing: 5)
 			photosCollectionView.collectionViewLayout = layout
 			photosCollectionView.dataSource = photoDataSourse
 			photosCollectionView.delegate = self
-			photosCollectionView.reloadData()
 		}
 	}
-	
-	// MARK: - Instance properties
-
-	private var photos = [Photo]()
 
 	// MARK: - ViewController LifeCycle
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
+		fetchData { results in
+			self.photoDataSourse.items = results
+			DispatchQueue.main.async {
+				self.photosCollectionView.reloadData()
+			}
+		}
 	}
 
 	// MARK: - Helpers
 
-	
+	func fetchData(_ completion: @escaping ([Photo]) -> Void) {
+		guard let url =  URL(string: "https://jsonplaceholder.typicode.com/photos") else {
+			return
+		}
+		URLSession.shared.dataTask(with: url) { (data, _, error) in
+			if error == nil {
+				guard let data =  data else {
+					return
+				}
+				do {
+					let photos =  try JSONDecoder().decode([Photo].self, from: data)
+					completion(photos)
+				} catch let jsonError {
+					print(jsonError)
+				}
+			} else {
+				print(error!)
+			}
+		}.resume()
+	}
 
 }
 
