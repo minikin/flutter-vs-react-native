@@ -12,6 +12,7 @@
 		FC16C2992065643000613C92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC16C2972065643000613C92 /* Main.storyboard */; };
 		FC16C29B2065643000613C92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC16C29A2065643000613C92 /* Assets.xcassets */; };
 		FC16C29E2065643000613C92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC16C29C2065643000613C92 /* LaunchScreen.storyboard */; };
+		FCF49540206F94320017ED0F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF4953F206F94320017ED0F /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FC16C29A2065643000613C92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC16C29D2065643000613C92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC16C29F2065643000613C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCF4953F206F94320017ED0F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		FC16C2922065643000613C92 /* native-ios */ = {
 			isa = PBXGroup;
 			children = (
-				FC16C2932065643000613C92 /* AppDelegate.swift */,
-				FC16C2952065643000613C92 /* ViewController.swift */,
-				FC16C2972065643000613C92 /* Main.storyboard */,
-				FC16C29A2065643000613C92 /* Assets.xcassets */,
-				FC16C29C2065643000613C92 /* LaunchScreen.storyboard */,
-				FC16C29F2065643000613C92 /* Info.plist */,
+				FCF49541206F945F0017ED0F /* Models */,
+				FCF49543206F94790017ED0F /* Supporting Files */,
+				FCF49542206F94650017ED0F /* ViewControllers */,
+				FCF49544206F94820017ED0F /* Xibs & Storyboards */,
 			);
 			path = "native-ios";
+			sourceTree = "<group>";
+		};
+		FCF49541206F945F0017ED0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCF4953F206F94320017ED0F /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FCF49542206F94650017ED0F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC16C2952065643000613C92 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FCF49543206F94790017ED0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC16C29F2065643000613C92 /* Info.plist */,
+				FC16C2932065643000613C92 /* AppDelegate.swift */,
+				FC16C29A2065643000613C92 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FCF49544206F94820017ED0F /* Xibs & Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FC16C29C2065643000613C92 /* LaunchScreen.storyboard */,
+				FC16C2972065643000613C92 /* Main.storyboard */,
+			);
+			path = "Xibs & Storyboards";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,7 +126,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Sasha Prokhorenko";
 				TargetAttributes = {
 					FC16C28F2065643000613C92 = {
@@ -136,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF49540206F94320017ED0F /* Photo.swift in Sources */,
 				FC16C2962065643000613C92 /* ViewController.swift in Sources */,
 				FC16C2942065643000613C92 /* AppDelegate.swift in Sources */,
 			);
@@ -177,6 +213,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +221,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -234,6 +272,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +280,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -276,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U8369V84MM;
-				INFOPLIST_FILE = "native-ios/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/native-ios/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.minikin.native-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,7 +331,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U8369V84MM;
-				INFOPLIST_FILE = "native-ios/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/native-ios/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.minikin.native-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";

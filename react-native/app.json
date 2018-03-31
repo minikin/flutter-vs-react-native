@@ -1,5 +1,16 @@
 {
   "expo": {
-    "sdkVersion": "25.0.0"
+    "sdkVersion": "25.0.0",
+    "name": "React Native Demo",
+    "version": "1.0.0",
+    "slug": "react-native-demo",
+    "ios": {
+      "bundleIdentifier": "me.minikin.reactNativeDemo",
+      "publishBundlePath": "ios/react-native-demo/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/react-native-demo/Supporting/shell-app-manifest.json"
+    },
+    "android": {
+      "package": "me.minikin.reactNativeDemo"
+    }
   }
 }
