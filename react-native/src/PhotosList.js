@@ -31,7 +31,7 @@ class PhotosList extends Component {
         }
     }
 
-    _keyExtractor = (item, index) => item.id
+    _keyExtractor = (item, index) => String(item.id)
 
     _renderItem = ({item}) => (
       <PhotoItem
