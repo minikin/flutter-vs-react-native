@@ -18,5 +18,6 @@ final class PhotoCell: UICollectionViewCell {
 
 	override func prepareForReuse() {
 		super.prepareForReuse()
+		photoView.image = nil
 	}
 }

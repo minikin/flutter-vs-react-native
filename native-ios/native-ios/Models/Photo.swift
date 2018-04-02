@@ -24,7 +24,6 @@ extension Photo {
 		guard let url = URL(string: photoUrlPath) else {
 			return
 		}
-		print(url)
 		cell.photoView.download(from: url)
 	}
 }
