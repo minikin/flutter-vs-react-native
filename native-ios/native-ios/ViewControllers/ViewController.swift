@@ -20,7 +20,7 @@ final class ViewController: UIViewController {
 	@IBOutlet private weak var photosCollectionView: UICollectionView! {
 		didSet {
 			let layout = CommonFlowLayout(columns: 1,
-																		itemHeight: 120,
+																		itemHeight: 200,
 																		inset: 5,
 																		spacing: 5,
 																		lineSpacing: 5)
@@ -69,4 +69,5 @@ final class ViewController: UIViewController {
 
 	// MARK: - UICollectionViewDelegate
 
-extension ViewController: UICollectionViewDelegate {}
+extension ViewController: UICollectionViewDelegate {
+}

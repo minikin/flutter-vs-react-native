@@ -1,7 +1,7 @@
 {
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 51716,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
   "expoServerNgrokUrl": "https://5x-2yk.minikin.react-native.exp.direct",
   "packagerNgrokUrl": "https://packager.5x-2yk.minikin.react-native.exp.direct",
   "ngrokPid": 8733

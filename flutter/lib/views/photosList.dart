@@ -15,33 +15,30 @@ class _PhotosListState extends State<PhotosList> {
   var photoList = <photo.Photo>[];
   bool isFetchingNextPage = false;
   ScrollController _scrollController = new ScrollController();
-
+ 
   @override
-  initState(){
+  initState() {
     super.initState();
     _getPhotos();
   }
 
   _getPhotos() async {
-    var stream = await photo.getPhotos(); 
-    stream.listen((photo) => setState(() =>
-        photoList.add(photo)
-      )
-    );
+    var stream = await photo.getPhotos();
+    stream.listen((photo) => setState(() => photoList.add(photo)));
   }
 
   @override
-   Widget build(BuildContext context) {
-     return new Scaffold(
-       body: new ListView.builder(
-         itemExtent: 200.0,
-         itemCount:  photoList.length,
-         itemBuilder: (context, index) {
-           final photo = photoList[index];
-           return new PhotoWidget(photo);
-         },
-         controller: _scrollController,
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      body: new ListView.builder(
+        itemExtent: 200.0,
+        itemCount: photoList.length,
+        itemBuilder: (context, index) {
+          final photo = photoList[index];
+          return new PhotoWidget(photo);
+        },
+        controller: _scrollController,
       ),
-     );
-   }
+    );
+  }
 }

@@ -7,17 +7,16 @@
 //
 
 import UIKit
+import AlamofireImage
 
 final class PhotoCell: UICollectionViewCell {
 
 	// MARK: - Instance properties
 
-	@IBOutlet weak var photoView: UIImageView!
-
-	// MARK: - Object LifeCycle
+	@IBOutlet weak var photoView: UIImageView?
 
 	override func prepareForReuse() {
 		super.prepareForReuse()
-		photoView.image = nil
+		photoView?.af_cancelImageRequest()
 	}
 }

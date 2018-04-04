@@ -23,24 +23,12 @@ class native_iosUITests: XCTestCase {
     func testExample() {
 			let app = XCUIApplication()
 			let collectionViewsQuery = app.collectionViews
-			let element = collectionViewsQuery.children(matching: .cell).element(boundBy: 1).children(matching: .other).element
-			element.swipeUp()
-			element.swipeUp()
-			element.swipeUp()
-			element.swipeUp()
-			element.swipeUp()
-			element.swipeUp()
-			element.swipeUp()
-			element.swipeUp()
-			element.swipeUp()
-			element.swipeUp()
-			element.swipeUp()
-			element.swipeUp()
-			element.swipeDown()
-			element.swipeDown()
-			element.swipeDown()
-			element.swipeDown()
-			element.swipeDown()
+			let element = collectionViewsQuery.children(matching: .cell).element(boundBy: 3).children(matching: .other).element
+			element.gentleSwipe(.Up)
+			element.gentleSwipe(.Up)
+			element.gentleSwipe(.Up)
+
+
     }
     
 }

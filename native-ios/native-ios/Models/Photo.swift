@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 struct Photo: Codable {
 
@@ -24,7 +25,7 @@ extension Photo {
 		guard let url = URL(string: photoUrlPath) else {
 			return
 		}
-		cell.photoView.download(from: url)
+		cell.photoView?.af_setImage(withURL: url)
 	}
 }
 

@@ -8,12 +8,9 @@ class PhotoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  new Container(
+    return new Container(
       margin: const EdgeInsets.all(4.0),
-      child: new Image.network(
-        photo.imagePath,
-        fit: BoxFit.cover
-       ),
+      child: new Image.network(photo.imagePath, fit: BoxFit.cover),
     );
   }
 }
