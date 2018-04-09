@@ -15,10 +15,11 @@ class _PhotosListState extends State<PhotosList> {
   var photoList = <photo.Photo>[];
   bool isFetchingNextPage = false;
   ScrollController _scrollController = new ScrollController();
- 
+
   @override
   initState() {
     super.initState();
+    print('App started me ....');
     _getPhotos();
   }
 
