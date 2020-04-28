@@ -8,7 +8,7 @@ class Photo {
   final int id;
   final String imagePath;
 
-  Photo.fromJson(Map jsonMap)
+  Photo.fromJson(Map<dynamic, dynamic> jsonMap)
       : id = jsonMap['id'],
         imagePath = jsonMap['url'];
 }

@@ -8,35 +8,34 @@ class PhotosList extends StatefulWidget {
   final String title;
 
   @override
-  _PhotosListState createState() => new _PhotosListState();
+  _PhotosListState createState() => _PhotosListState();
 }
 
 class _PhotosListState extends State<PhotosList> {
-  var photoList = <photo.Photo>[];
+  final _photoList = <photo.Photo>[];
   bool isFetchingNextPage = false;
-  ScrollController _scrollController = new ScrollController();
+  final _scrollController = ScrollController();
 
   @override
-  initState() {
-    super.initState();
-    print('App started me ....');
+  void initState() {
     _getPhotos();
+    super.initState();
   }
 
-  _getPhotos() async {
-    var stream = await photo.getPhotos();
-    stream.listen((photo) => setState(() => photoList.add(photo)));
+  void _getPhotos() async {
+    final stream = await photo.getPhotos();
+    stream.listen((photo) => setState(() => _photoList.add(photo)));
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      body: new ListView.builder(
-        itemExtent: 200.0,
-        itemCount: photoList.length,
+    return Scaffold(
+      body: ListView.builder(
+        itemExtent: 200,
+        itemCount: _photoList.length,
         itemBuilder: (context, index) {
-          final photo = photoList[index];
-          return new PhotoWidget(photo);
+          final photo = _photoList[index];
+          return PhotoWidget(photo);
         },
         controller: _scrollController,
       ),
